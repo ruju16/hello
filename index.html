@@ -1,6 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-HELLO
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding Feedback Form</title>
+<style>
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #f4f4f4;
+           text-align: center;
+           margin: 50px;
+       }
+       form {
+           max-width: 500px;
+           margin: 0 auto;
+           background-color: #fff;
+           padding: 20px;
+           border-radius: 10px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       }
+       label {
+           display: block;
+           margin-bottom: 10px;
+       }
+       select {
+           width: 100%;
+           padding: 8px;
+           margin-bottom: 15px;
+           box-sizing: border-box;
+       }
+       button {
+           background-color: #4CAF50;
+           color: #fff;
+           padding: 10px 20px;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+</style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3QHXZNFFK"></script>
@@ -14,5 +51,35 @@ HELLO
 <body>
 Name: Rujuta
 SAPID: 60018210015
+<form id="feedbackForm" onsubmit="showDialog(); return false;">
+<label for="q1">Favorite Programming Language:</label>
+<select id="q1" name="question1">
+<option value="javascript">JavaScript</option>
+<option value="python">Python</option>
+<option value="java">Java</option>
+<option value="cpp">C++</option>
+<option value="other">Other</option>
+</select>
+<label for="q2">Preferred Coding Environment:</label>
+<select id="q2" name="question2">
+<option value="vscode">Visual Studio Code</option>
+<option value="pycharm">PyCharm</option>
+<option value="eclipse">Eclipse</option>
+<option value="sublime">Sublime Text</option>
+<option value="other">Other</option>
+</select>
+<label for="q3">Code Review Experience:</label>
+<select id="q3" name="question3">
+<option value="positive">Positive</option>
+<option value="neutral">Neutral</option>
+<option value="negative">Negative</option>
+</select>
+<button type="submit">Submit</button>
+</form>
+<script>
+       function showDialog() {
+           alert("Thanks for submitting!");
+       }
+</script>
 </body>
 </html>
